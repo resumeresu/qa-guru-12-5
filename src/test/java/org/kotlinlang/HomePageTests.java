@@ -60,7 +60,7 @@ public class HomePageTests {
     }
     @MethodSource("tryKotlinTestText")
     @ParameterizedTest
-    void tryKotlinTest(String elementText, String resultText) {
+    void tryKotlinRunExamples(String elementText, String resultText) {
         Selenide.open("/");
         $(byText(elementText)).scrollIntoView(true).click();
         $(".kotlin-code-examples-section__run").click();
